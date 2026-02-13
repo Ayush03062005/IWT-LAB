@@ -1,0 +1,135 @@
+<html >
+<head>
+  
+    <title>F1 Jersey Shop</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #EAE0D5;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+		color: #22333B
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            color: #003366; 
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        
+        .product-container {
+            display: flex;  
+            flex-direction: row; 
+            justify-content: space-between; 
+            gap: 20px;
+        }
+
+        
+        .product-card {
+            flex: 1; 
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            color: #000000;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-weight: bold;
+            color: #333333;
+            font-size: 1.2rem;
+        }
+
+       
+        .cart-btn {
+            background-color: #008080; 
+            color: #000000;
+            border: none;
+            padding: 12px 0;
+            width: 100%;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .cart-btn:hover {
+            background-color: #e68a00;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h2>Featured Jerseys</h2>
+
+        
+        <div class="product-container">
+            
+           
+            <div class="product-card">
+                <img src="mcl.jfif">
+                <h3>McLaren 2026</h3>
+                <p>$3,499</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+           
+            <div class="product-card">
+                <img src="ferrari.jfif" >
+                <h3>Ferrari 2026</h3>
+                <p>$3,499</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+            
+            <div class="product-card">
+                <img src="amg.jfif">
+                <h3>Mercedes-Amg 2026</h3>
+                <p>$1,899</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+           
+            <div class="product-card">
+                <img src="red.jfif"">
+                <h3>RedBull 2026</h3>
+                <p>$3,999</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
