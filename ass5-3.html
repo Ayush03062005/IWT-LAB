@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+n=25675
+temp=n
+rev=0
+while(n!=0)
+{
+	d=n%10
+	rev=(rev*10)+d
+	n=n/10
+}
+
+if(rev==temp)
+console.log("Number is Palindrome")
+else
+console.log("Number is not Palindrome")
+</script>
+</body>
+</html>

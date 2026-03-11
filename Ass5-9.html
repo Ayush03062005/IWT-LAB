@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+n=prompt("Enter a number: ")
+temp=n
+cd=0
+while(temp!=0)
+{
+cd=cd+1
+console.log(cd)
+temp=Math.floor(temp/10)
+}
+console.log("No. of digits= "+cd)
+temp=n
+s=0
+d=0
+while(n!=0)
+{
+d=n%10
+s=s+(d**cd)
+n=Math.floor(n/10)
+}
+if(temp==s)
+{
+console.log("It is an armstrong number")
+}
+else
+{
+console.log("It is not an armstrong number")
+}
+</script>
+</body>
+</html>

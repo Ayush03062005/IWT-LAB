@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+a=new Array(1,2,3,3,4,55,55,6,5,2)
+b=new Array()
+for(i=0;i<a.length;i++)
+{
+	if(!b.includes(a[i]))
+	{	c=0
+		b.push(a[i])
+		for(j=0;j<a.length;j++)
+		{
+			if(a[i]==a[j])
+			c++
+		}
+		console.log(a[i]+" occurs for "+c+" times.")
+	}
+
+}
+</script>
+</body>
+</html>

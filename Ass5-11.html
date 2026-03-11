@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function reverseArray(arr)
+{
+l=arr.length
+s=l
+rev=[]
+for(i=0;i<l;i++)
+{
+	rev[i]=arr[s-1]
+	s=s-1
+}
+return[rev]
+}
+
+arr=['Apple','Banana','Mango','Guava']
+const[reverse]=reverseArray(arr)
+console.log(reverse)
+</script>
+</body>
+</html>
