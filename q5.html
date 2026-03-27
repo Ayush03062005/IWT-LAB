@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Ass6-q5</title>
+</head>
+
+<body>
+<h3>checking Prime Number</h3>
+<p>Enter a prime number: </p>
+<input type="number" id="numInput">
+<button onclick="checkprime()">CheckNow</button>
+<script>
+function checkprime()
+{
+var n=parseInt(document.getElementById("numInput").value)
+var isprime=true
+if(n<=1)
+{
+isprime=false
+}
+else
+{
+	for(var i=2;i<n;i++)
+	{
+		if(n%i==0)
+		{
+			isprime=false;
+			break;
+		}
+	}
+
+}
+
+if(isprime)
+{
+alert(n+ " is a prime number.")
+}
+else
+{
+alert(n+" is not a prime number.")
+}
+
+}
+
+
+
+</script>
+</body>
+</html>

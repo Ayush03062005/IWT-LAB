@@ -1,21 +1,16 @@
 <html>
 <head>
-<title>Q1</title>
-<link rel="stylesheet" href="q1.css">
+<title>Ass6-q1</title>
 </head>
-
 <body>
+<h1 id="main-heading">Hello World</h1>
+<button onclick="changeHeading()">Click Me!!</button>
 
+<script>
+function changeHeading(){
+document.getElementById("main-heading").innerText="Welcome to DOM Manipulation"
+}
 
-
-<h1 class="inline-header">HTML</h1>
-<h2 class="inline-header">CSS</h2>
-<h3 class="inline-header">JAVASCRIPT</h3>
-<hr>
-
-
-<span class="block-header">JSP</span>
-<span class="block-header" >JDBC</span>
-<span class="block-header">MySQL</span>
+</script>
 </body>
 </html>

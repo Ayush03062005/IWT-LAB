@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <style>
+        
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        form { max-width: 400px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        input, textarea, select { width: 100%; margin-bottom: 10px; }
+        input[type="radio"] { width: auto; margin-right: 5px; }
+        button { background-color: #28a745; color: white; border: none; padding: 10px; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration</h2>
+    <form onsubmit="return validateForm()">
+        <label>Name:</label>
+        <input type="text" id="userName">
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" id="male"> Male
+        <input type="radio" name="gender" value="Female" id="female"> Female<br><br>
+
+        <label>Mobile Number:</label>
+        <input type="text" id="mobile">
+
+        <label>Address:</label>
+        <textarea id="address" rows="3"></textarea>
+
+        <label>Country:</label>
+        <select id="country">
+            <option value="">--Select Country--</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+        </select>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+
+        <label>Password:</label>
+        <input type="password" id="pass">
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            
+            var name = document.getElementById("userName").value;
+            var mobile = document.getElementById("mobile").value;
+            var address = document.getElementById("address").value;
+            var country = document.getElementById("country").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            
+            
+            var male = document.getElementById("male").checked;
+            var female = document.getElementById("female").checked;
+
+            
+            if (name == "" || mobile == "" || address == "" || country == "" || email == "" || pass == "" || (!male && !female)) {
+                alert("Error: All fields are mandatory!");
+                return false;
+            }
+
+           
+            if (mobile.length !== 10 || isNaN(mobile)) {
+                alert("Error: Mobile number must be exactly 10 digits.");
+                return false;
+            }
+
+          
+            var emailCheck = /\S+@\S+\.\S+/;
+            if (!emailCheck.test(email)) {
+                alert("Error: Please enter a valid email address.");
+                return false;
+            }
+
+          
+            if (pass.length < 6 || pass.length > 15) {
+                alert("Error: Password length must be between 6 and 15 characters.");
+                return false;
+            }
+
+          
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

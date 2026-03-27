@@ -1,26 +1,30 @@
 <html>
 <head>
-<title>Q2</title>
-<link rel="stylesheet" href="q2.css">
+<title>Ass6-q2</title>
 </head>
 <body>
+<p id="myParagraph">This is the paragraph to be toggled</p>
 
-<div class="card">
-	<h1>LOGIN</h1>
-	<input type="text" placeholder="Username"><br><br>
-	<input type="password" placeholder="Password"><br><br>
+<button id="toggle-btn" onclick="togglevisibility()">Hide Text</button>
 
-	
- 	
-<div class="remember-me">
-    <input type="checkbox" id="remember">
-    <label for="remember">Remember Me</label>
-</div>
+<script>
+function togglevisibility()
+{
+var para=document.getElementById("myParagraph")
+var btn=document.getElementById("toggle-btn")
 
+if(para.style.display=="none")
+	{
+		para.style.display="block"
+		btn.innerText="Hide Text"
+	}
+else
+	{
+		para.style.display="none"
+		btn.innerText="Show text"
+	}	
 
-	<div class="wide-btn">
-	<button>Login</button>
-	</div>
-</div>
+}
+</script>
 </body>
 </html>

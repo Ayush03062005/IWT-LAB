@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Ass6-q4</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>Simple Counter</h3>
+
+<button onclick="Decrement()">-</button>
+<input type="number" id="counter" value="0">
+<button onclick="Increment()">+</button>
+<br>
+<button onclick="reset()">!RESET!</button>
+
+<script>
+var counterinput=document.getElementById("counter")
+
+function Increment()
+{
+var currentvalue=parseInt(counterinput.value)
+counterinput.value=currentvalue+1
+}
+
+
+
+function Decrement()
+{
+var currentvalue=parseInt(counterinput.value)
+
+if(currentvalue>0)
+{
+counterinput.value=currentvalue-1
+}
+}
+
+
+
+function reset()
+{
+counterinput.value='00000000000000000000'
+
+}
+
+
+
+
+</script>
+</body>
+</html>
